@@ -1,5 +1,5 @@
 {
-  "name": "ansible-dev-container-docker",
+  "name": "code-kaizen-portainer-dev-container-docker",
   "image": "ghcr.io/codekaizen-github/ansible-dev-tools-image:latest",
   "workspaceFolder": "/workdir/ansible_collections/code_kaizen/portainer",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workdir/ansible_collections/code_kaizen/portainer,type=bind,consistency=cached",
