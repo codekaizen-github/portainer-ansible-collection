@@ -2,19 +2,6 @@
 
 This repository contains the `code_kaizen.portainer` Ansible Collection.
 
-## INSTRUCTIONS FOR USING THIS TEMPLATE
-
-- [ ] Create a new repository on GitHub, selecting this repo to use as the template.
-  - [ ] [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-- [ ] Clone the repository to your local machine.
-- [ ] Search replace these terms to match your collection name and organization
-  - [ ] `code_kaizen.portainer`
-  - [ ] `code_kaizen`
-  - [ ] `portainer`
-  - [ ] `Code_Kaizen`
-  - [ ] `Portainer
-- [ ] Remove these instructions from the README.
-
 <!--start requires_ansible-->
 <!--end requires_ansible-->
 
