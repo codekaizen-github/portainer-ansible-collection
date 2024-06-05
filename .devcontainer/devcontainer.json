@@ -1,0 +1,29 @@
+{
+  "name": "ansible-dev-container-codespaces",
+  "image": "ghcr.io/codekaizen-github/ansible-dev-tools-image:latest",
+  "workspaceFolder": "/workdir/ansible_collections/my_organization/my_collection",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workdir/ansible_collections/my_organization/my_collection,type=bind,consistency=cached",
+  "containerUser": "podman",
+  "runArgs": [
+    "--security-opt",
+    "seccomp=unconfined",
+    "--security-opt",
+    "label=disable",
+    "--cap-add=SYS_ADMIN",
+    "--cap-add=SYS_RESOURCE",
+    "--device",
+    "/dev/fuse",
+    "--security-opt",
+    "apparmor=unconfined",
+    "--hostname=ansible-dev-container"
+  ],
+  "updateRemoteUserUID": true,
+  "postAttachCommand": "pre-commit install;",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.ansible"
+      ]
+    }
+  }
+}
