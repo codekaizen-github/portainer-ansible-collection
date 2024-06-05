@@ -1,5 +1,5 @@
 ---
-name: Release my_organization.my_collection
+name: Release code_kaizen.portainer
 
 on: # yamllint disable-line rule:truthy
   release:

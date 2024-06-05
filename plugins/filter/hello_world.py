@@ -1,4 +1,4 @@
-"""A hello-world filter plugin in my_organization.my_collection."""
+"""A hello-world filter plugin in code_kaizen.portainer."""
 
 from __future__ import absolute_import, division, print_function
 

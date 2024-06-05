@@ -1,4 +1,4 @@
-"""Unit tests for my_organization.my_collection"""
+"""Unit tests for code_kaizen.portainer"""
 
 
 def test_basic() -> None:

@@ -1,6 +1,6 @@
-# My_Organization My_Collection Collection
+# Code_Kaizen Portainer Collection
 
-This repository contains the `my_organization.my_collection` Ansible Collection.
+This repository contains the `code_kaizen.portainer` Ansible Collection.
 
 ## INSTRUCTIONS FOR USING THIS TEMPLATE
 
@@ -8,11 +8,11 @@ This repository contains the `my_organization.my_collection` Ansible Collection.
   - [ ] [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 - [ ] Clone the repository to your local machine.
 - [ ] Search replace these terms to match your collection name and organization
-  - [ ] `my_organization.my_collection`
-  - [ ] `my_organization`
-  - [ ] `my_collection`
-  - [ ] `My_Organization`
-  - [ ] `My_Collection
+  - [ ] `code_kaizen.portainer`
+  - [ ] `code_kaizen`
+  - [ ] `portainer`
+  - [ ] `Code_Kaizen`
+  - [ ] `Portainer
 - [ ] Remove these instructions from the README.
 
 <!--start requires_ansible-->
@@ -24,7 +24,7 @@ Some modules and plugins require external libraries. Please check the requiremen
 
 ## Included content
 
-Please check the included content on the [Ansible Galaxy page for this collection](https://galaxy.ansible.com/my_organization/my_collection).
+Please check the included content on the [Ansible Galaxy page for this collection](https://galaxy.ansible.com/code_kaizen/portainer).
 
 <!--start collection content-->
 <!--end collection content-->
@@ -32,26 +32,26 @@ Please check the included content on the [Ansible Galaxy page for this collectio
 ## Using this collection
 
 ```
-    ansible-galaxy collection install my_organization.my_collection
+    ansible-galaxy collection install code_kaizen.portainer
 ```
 
 You can also include it in a `requirements.yml` file and install it via `ansible-galaxy collection install -r requirements.yml` using the format:
 
 ```yaml
 collections:
-  - name: my_organization.my_collection
+  - name: code_kaizen.portainer
 ```
 
 To upgrade the collection to the latest available version, run the following command:
 
 ```bash
-ansible-galaxy collection install my_organization.my_collection --upgrade
+ansible-galaxy collection install code_kaizen.portainer --upgrade
 ```
 
-You can also install a specific version of the collection, for example, if you need to downgrade when something is broken in the latest version (please report an issue in this repository). Use the following syntax where `X.Y.Z` can be any [available version](https://galaxy.ansible.com/my_organization/my_collection):
+You can also install a specific version of the collection, for example, if you need to downgrade when something is broken in the latest version (please report an issue in this repository). Use the following syntax where `X.Y.Z` can be any [available version](https://galaxy.ansible.com/code_kaizen/portainer):
 
 ```bash
-ansible-galaxy collection install my_organization.my_collection:==X.Y.Z
+ansible-galaxy collection install code_kaizen.portainer:==X.Y.Z
 ```
 
 See [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html) for more details.
@@ -93,7 +93,7 @@ python -m tox --conf tox-ansible.ini --ansible -e sanity-py3.12-devel --matrix-s
 
 ## Release notes
 
-See the [changelog](https://github.com/codekaizen-github/my_collection-ansible-collection/tree/main/CHANGELOG.rst).
+See the [changelog](https://github.com/codekaizen-github/portainer-ansible-collection/tree/main/CHANGELOG.rst).
 
 ## Roadmap
 

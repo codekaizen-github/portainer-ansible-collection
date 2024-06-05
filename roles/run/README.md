@@ -1,4 +1,4 @@
-My_Organization.My_Collection Run Role
+Code_Kaizen.Portainer Run Role
 ========================
 
 A brief description of the role goes here.
@@ -27,20 +27,20 @@ Including an example of how to use your role (for instance, with variables passe
 - name: Execute tasks on servers
   hosts: servers
   roles:
-    - role: my_organization.my_collection.run
+    - role: code_kaizen.portainer.run
       run_x: 42
 ```
 
 Another way to consume this role would be:
 
 ```yaml
-- name: Initialize the run role from my_organization.my_collection
+- name: Initialize the run role from code_kaizen.portainer
   hosts: servers
   gather_facts: false
   tasks:
     - name: Trigger invocation of run role
       ansible.builtin.include_role:
-        name: my_organization.my_collection.run
+        name: code_kaizen.portainer.run
       vars:
         run_x: 42
 ```
