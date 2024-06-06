@@ -2,6 +2,81 @@
 
 This repository contains the `code_kaizen.portainer` Ansible Collection.
 
+## TODO
+
+- [ ] Create stack modules
+  - `stack`
+    - `state` (enum)
+      - `fetched`
+        - LIST
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackList
+      - `absent`
+        - LIST
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackList
+          - Look for stack by unique identifier: name
+        - DELETE
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackDelete
+      - `started`
+        - LIST
+          - Look for stack by unique identifier: name
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackList
+        - POST
+          - If the stack does not exist yet, create it
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateKubernetesGit
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateKubernetesFile
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateKubernetesUrl
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerStandaloneFile
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerStandaloneRepository
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerStandaloneString
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerSwarmFile
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerSwarmRepository
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerSwarmString
+        - PUT
+          - If the stack already exists, update it
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackUpdate
+          - If `git`, may also need to call this method
+            - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackUpdateGit
+        - START
+          - Make sure the stack is started
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackStart
+      - `stopped`
+        - LIST
+          - Look for stack by unique identifier: name
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackList
+        - POST
+          - If the stack does not exist yet, create it
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateKubernetesGit
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateKubernetesFile
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateKubernetesUrl
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerStandaloneFile
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerStandaloneRepository
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerStandaloneString
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerSwarmFile
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerSwarmRepository
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackCreateDockerSwarmString
+        - PUT
+          - If the stack already exists, update it
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackUpdate
+          - If `git`, may also need to call this method
+            - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackUpdateGit
+        - STOP
+          - Make sure the stack is stopped
+          - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackStop
+    - `associate` (bool)
+      - After any other changes driven by the `state` param, re-associate the stack with the endpoint passed as arg
+      - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackAssociate
+      - Basically, give us permission to reassociate the orphaned stack with the endpoint passed as arg
+    - `redeploy` (bool)
+      - After any other changes driven by the `state` param, redeploy the stack
+      - If `webhook`, use this strategy
+        - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/WebhookInvoke
+      - If `git`, use this strategy
+        - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackGitRedeploy
+    - `get_stack_file` (bool)
+      - For each stack data returned, add the stack file to the data as an additional attribute
+      - https://app.swaggerhub.com/apis/portainer/portainer-ce/2.19.5#/stacks/StackFileInspect
+- [ ] Create endpoint modules
+
 <!--start requires_ansible-->
 <!--end requires_ansible-->
 
